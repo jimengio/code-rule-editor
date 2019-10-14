@@ -1,0 +1,47 @@
+{
+ :sessions {}
+ :users {}
+ :locales {
+  "algorithm" {"zhCN" "算法", "enUS" "Algorithm"}
+  "codeRule" {"zhCN" "编号规则", "enUS" "Code rule"}
+  "confirm" {"zhCN" "确定", "enUS" "Confirm"}
+  "content" {"zhCN" "内容", "enUS" "Content"}
+  "contentRequired" {"zhCN" "内容必填", "enUS" "Content is required"}
+  "dataIsRequired" {"zhCN" "数据必填", "enUS" "Data is required"}
+  "initialValue" {"zhCN" "初始值", "enUS" "Initial value"}
+  "invalidInput" {"zhCN" "输入无效", "enUS" "Invalid input"}
+  "lblRemark" {"zhCN" "备注", "enUS" "Remark"}
+  "lblRequired" {"zhCN" "必填", "enUS" "Required"}
+  "length" {"zhCN" "长度", "enUS" "length"}
+  "maxStringLength" {"zhCN" "最长不能超过{n}个字符", "enUS" "Maximum characters cannot exceed {n}"}
+  "maximumNotBeExceed" {"zhCN" "最大数值不能超过{n}", "enUS" "The maximum value cannot exceed {n}"}
+  "minStringLength" {"zhCN" "最短不能少于{n}个字符", "enUS" "最短不能少于{n}个字符"}
+  "neverReset" {"zhCN" "永不重置", "enUS" "Never reset"}
+  "numberDigits" {"zhCN" "{n}位", "enUS" "{n} digits"}
+  "paddingCharactor" {"zhCN" "补齐", "enUS" "Padding charactor"}
+  "parameterName" {"zhCN" "参数名称", "enUS" "Parameter name"}
+  "parameterNameRequired" {"zhCN" "参数名称必填", "enUS" "Parameter name required"}
+  "pleaseEnter" {"zhCN" "请输入", "enUS" "Please enter"}
+  "pleaseSelect" {"zhCN" "请选择", "enUS" "Please select"}
+  "resetEveryDay" {"zhCN" "每日重置", "enUS" "Reset every day"}
+  "resetEveryMonth" {"zhCN" "每月重置", "enUS" "Reset every month"}
+  "resetEveryYear" {"zhCN" "每年重置", "enUS" "Reset every year"}
+  "resetPeriod" {"zhCN" "重置时间", "enUS" "Reset duration"}
+  "scope" {"zhCN" "范围", "enUS" "Scope"}
+  "sequence_autoIncrement" {"zhCN" "流水号（自增）", "enUS" "Auto increment"}
+  "sequence_checksum" {"zhCN" "校验值", "enUS" "Checksum"}
+  "sequence_dayOfMonth" {"zhCN" "当月第几天", "enUS" "Day of month"}
+  "sequence_dayOfWeek" {"zhCN" "当周第几天", "enUS" "Day of week"}
+  "sequence_dayOfYear" {"zhCN" "当年第几天", "enUS" "Day of year"}
+  "sequence_literal" {"zhCN" "固定文本", "enUS" "Literal"}
+  "sequence_month" {"zhCN" "月份", "enUS" "Month"}
+  "sequence_parameterValue" {"zhCN" "参数值", "enUS" "Parameter value"}
+  "sequence_userInput" {"zhCN" "文本", "enUS" "Text"}
+  "sequence_weekOfYear" {"zhCN" "当年第几周", "enUS" "Week of year"}
+  "sequence_year" {"zhCN" "年份", "enUS" "Year"}
+  "symbolColon" {"zhCN" "：", "enUS" ": "}
+  "type" {"zhCN" "类型", "enUS" "Type"}
+ }
+ :schema {:version "0.2.x"}
+ :settings {:app-id "050bf2725352f125", :app-secret "w7qw7ME8c8wGQJBk8EOM5MuFybgoEA9F"}
+}
