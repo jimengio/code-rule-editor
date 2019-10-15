@@ -8,7 +8,9 @@ import CodeRuleEditor from "../../src/editor";
 import CodeRuleView from "../../src/code-rule-view";
 import { CodeRuleModal } from "../../src";
 import { fullscreen, row, expand } from "@jimengio/flex-styles";
-import { DocSidebar, ISidebarEntry } from "@jimengio/doc-frame";
+import { DocSidebar, ISidebarEntry, DocDemo } from "@jimengio/doc-frame";
+
+let items: ISidebarEntry[] = [{ title: "Editor", path: "/" }];
 
 let Container: FC<{
   router: IRouteParseResult;
@@ -16,7 +18,6 @@ let Container: FC<{
   let [segments, setSegments] = useState([]);
   let [visible, setVisible] = useState(false);
 
-  let items: ISidebarEntry[] = [];
   let onSwitchPage = (path) => {};
 
   /** Methods */
@@ -35,38 +36,39 @@ let Container: FC<{
       />
 
       <div className={cx(expand, stylePage)}>
-        <div>Editor</div>
-        <CodeRuleEditor
-          segments={[]}
-          onSubmit={(xs) => {
-            setSegments(xs);
-          }}
-        />
+        <DocDemo title="DEMO" link="https://github.com/jimengio/code-rule-editor/blob/master/example/pages/container.tsx">
+          <CodeRuleEditor
+            segments={[]}
+            onSubmit={(xs) => {
+              setSegments(xs);
+            }}
+          />
+        </DocDemo>
 
-        <div>Viewer</div>
+        <DocDemo title="Viewer" link="https://github.com/jimengio/code-rule-editor/blob/master/example/pages/container.tsx">
+          <CodeRuleView segments={segments || []} />
+        </DocDemo>
 
-        <CodeRuleView segments={segments || []} />
-
-        <div>Modal</div>
-
-        <button
-          onClick={() => {
-            setVisible(true);
-          }}
-        >
-          Open editor
-        </button>
-        <CodeRuleModal
-          visible={visible}
-          codeRules={segments}
-          onCancelModal={() => {
-            setVisible(false);
-          }}
-          onSubmitForm={(xs) => {
-            setSegments(xs);
-            setVisible(false);
-          }}
-        />
+        <DocDemo title="Modal Editor" link={"https://github.com/jimengio/code-rule-editor/blob/master/example/pages/container.tsx"}>
+          <button
+            onClick={() => {
+              setVisible(true);
+            }}
+          >
+            Open editor
+          </button>
+          <CodeRuleModal
+            visible={visible}
+            codeRules={segments}
+            onCancelModal={() => {
+              setVisible(false);
+            }}
+            onSubmitForm={(xs) => {
+              setSegments(xs);
+              setVisible(false);
+            }}
+          />
+        </DocDemo>
       </div>
     </div>
   );

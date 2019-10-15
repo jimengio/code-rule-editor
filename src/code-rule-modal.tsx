@@ -5,6 +5,7 @@ import { ICodeRule } from "./models/code-rule";
 
 import { MesonModal } from "@jimengio/meson-modal";
 import CodeRuleEditor from "./editor";
+import { css } from "emotion";
 
 interface IProps {
   visible: boolean;
@@ -26,7 +27,7 @@ export default class CodeRuleModal extends Component<IProps, any> {
         onClose={this.props.onCancelModal}
         renderContent={() => {
           return (
-            <div>
+            <div className={styleBody}>
               <CodeRuleEditor segments={codeRules || []} onSubmit={this.props.onSubmitForm} />
             </div>
           );
@@ -35,3 +36,7 @@ export default class CodeRuleModal extends Component<IProps, any> {
     );
   }
 }
+
+let styleBody = css`
+  padding: 20px;
+`;
