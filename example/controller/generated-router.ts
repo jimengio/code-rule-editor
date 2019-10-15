@@ -19,18 +19,6 @@ export let genRouter = {
     path: () => `/home`,
     go: () => switchPath(`/home`),
   },
-  content: {
-    name: "content",
-    raw: "content",
-    path: () => `/content`,
-    go: () => switchPath(`/content`),
-  },
-  else: {
-    name: "else",
-    raw: "else",
-    path: () => `/else`,
-    go: () => switchPath(`/else`),
-  },
   $: {
     name: "home",
     raw: "",

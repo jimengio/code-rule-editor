@@ -22,13 +22,14 @@
   "license": "MIT",
   "devDependencies": {
     "@jimengio/ci-progress-webpack-plugin": "^0.1.0",
+    "@jimengio/doc-frame": "^0.1.2-a4",
     "@jimengio/fa-icons": "^0.2.0",
+    "@jimengio/flex-styles": "^0.1.5",
     "@jimengio/meson-display": "^0.2.1",
     "@jimengio/meson-modal": "^0.2.14-a1",
     "@jimengio/router-code-generator": "^0.2.0",
-    "@jimengio/safe-property": "^0.0.2",
-    "@jimengio/flex-styles": "^0.1.5",
     "@jimengio/ruled-router": "^0.2.15",
+    "@jimengio/safe-property": "^0.0.2",
     "@jimengio/shared-utils": "^0.1.5",
     "@types/antd": "^1.0.0",
     "@types/lodash": "^4.14.144",
@@ -76,10 +77,10 @@
   },
   "peerDependencies": {
     "@jimengio/fa-icons": "*",
+    "@jimengio/flex-styles": "*",
     "@jimengio/meson-display": "*",
     "@jimengio/meson-modal": "*",
     "@jimengio/safe-property": "*",
-    "@jimengio/flex-styles": "*",
     "@jimengio/shared-utils": "*"
   }
 }
