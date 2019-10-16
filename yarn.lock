@@ -128,27 +128,15 @@
     highlight.js "^9.15.10"
     remarkable "^2.0.0"
 
-"@jimengio/fa-icons@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@jimengio/fa-icons/-/fa-icons-0.2.0.tgz#50cfe599ee4c9ab70e780be4ddc6dc78d8bd33a8"
-  integrity sha512-QpSuslOYU+cHgWNlwtQCRxHQVsm4cyzxbjeItf9NH0tW85RveNs1mJvkCD9CndehOXn04eoqxKA+Mwhju0UDaQ==
-
-"@jimengio/flex-styles@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/@jimengio/flex-styles/-/flex-styles-0.1.5.tgz#610452f1a7e445fdec33e2d8180d49122671238d"
-  integrity sha512-97X8vD2FPSBf2bqOrWIz60OgBxpdcdsxbGB2TU3xulv0cP8Vezd6s/mYvPIssX3hpqMXl1983SKlrJwgi294AQ==
+"@jimengio/flex-styles@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/@jimengio/flex-styles/-/flex-styles-0.1.6.tgz#d37e37aa4a85c72feff386c27b920a5f8c5f6335"
+  integrity sha512-K5Ij+DrkQFgMc4MMWJOCsI8S26xUy6a1fe0JWEtQjwhrEGXwGv/w4coD19+uMcqtLO1HHasfN2NuoJNSh9g5ag==
 
 "@jimengio/jimo-icons@^0.2.1":
   version "0.2.1"
   resolved "https://registry.npmjs.org/@jimengio/jimo-icons/-/jimo-icons-0.2.1.tgz#cb38daf93d5a5a713d9f71a77134a906a260cbe2"
   integrity sha512-v4wMkKvBa91opUGhM1TvSrz1FvcPwS+srhaE+tgZHiB4D+kOsecC9SDCfOIt1C2CYlclRQcbPBDBfGb7rV1WIw==
-
-"@jimengio/meson-display@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/@jimengio/meson-display/-/meson-display-0.2.1.tgz#00e3df379e12f30e901a7ed2e7caf47959c088ab"
-  integrity sha512-w/aRjW70aQg8PnPK6ngniuqKVSQQ6FMeiUV+92ZNjRiSNYbXWhf5kc0BRsKXQvCyahTJ+LRk81eyoQZfOlgoKA==
-  dependencies:
-    react-transition-group "^4.2.2"
 
 "@jimengio/meson-modal@^0.2.14-a1":
   version "0.2.14-a1"
@@ -5059,7 +5047,7 @@ react-slick@~0.25.2:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-transition-group@^4.2.2, react-transition-group@^4.3.0:
+react-transition-group@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.3.0.tgz#fea832e386cf8796c58b61874a3319704f5ce683"
   integrity sha512-1qRV1ZuVSdxPlPf4O8t7inxUGpdyO5zG9IoNfJxSO0ImU2A1YWkEQvFPuIPZmMLkg5hYs7vv5mMOyfgSkvAwvw==
