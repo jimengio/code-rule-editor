@@ -1,6 +1,6 @@
 {
   "name": "@jimengio/code-rule-editor",
-  "version": "0.1.0-a1",
+  "version": "0.1.0-a2",
   "description": "Code rule editor of JimengIO",
   "main": "lib/index.js",
   "scripts": {
@@ -23,9 +23,7 @@
   "devDependencies": {
     "@jimengio/ci-progress-webpack-plugin": "^0.1.0",
     "@jimengio/doc-frame": "^0.1.2-a4",
-    "@jimengio/fa-icons": "^0.2.0",
-    "@jimengio/flex-styles": "^0.1.5",
-    "@jimengio/meson-display": "^0.2.1",
+    "@jimengio/flex-styles": "^0.1.6",
     "@jimengio/meson-modal": "^0.2.14-a1",
     "@jimengio/router-code-generator": "^0.2.0",
     "@jimengio/ruled-router": "^0.2.15",
@@ -68,7 +66,6 @@
     "dayjs": "^1.8.16",
     "decimal.js": "^10.2.0",
     "emotion": "^10.0.17",
-    "font-awesome": "^4.7.0",
     "immer": "^4.0.1",
     "lodash": "^4.17.15",
     "query-string": "^6.8.3",
@@ -76,9 +73,7 @@
     "react-dom": "^16.10.2"
   },
   "peerDependencies": {
-    "@jimengio/fa-icons": "*",
-    "@jimengio/flex-styles": "*",
-    "@jimengio/meson-display": "*",
+    "@jimengio/flex-styles": ">=0.1.6",
     "@jimengio/meson-modal": "*",
     "@jimengio/safe-property": "*",
     "@jimengio/shared-utils": "*"

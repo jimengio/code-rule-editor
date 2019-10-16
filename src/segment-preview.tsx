@@ -6,7 +6,6 @@ import { css, cx } from "emotion";
 import produce from "immer";
 import { ECodeRuleType } from "./models/types";
 
-import KIcon, { EFaIcon } from "@jimengio/fa-icons";
 import {
   ICodeRuleFormParameterValue,
   ICodeRuleFormLiteral,
@@ -22,7 +21,6 @@ import { row, column } from "@jimengio/flex-styles";
 import { emptyBase64Image } from "./utils/image";
 import { lang } from "./lingual";
 import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
-import FaIcon from "@jimengio/fa-icons";
 
 interface IProps {
   form: any;
@@ -92,7 +90,7 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
               this.props.onRemove();
             }}
           >
-            <KIcon name={EFaIcon.Remove} />
+            ×
           </span>
         </div>
         <div className={cx(styleLabel, this.props.isFocused ? styleFocused : null)}>{this.renderPreview(this.props.form)}</div>
@@ -192,9 +190,9 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
 
 const styleRemoveIcon = css`
   color: #aaa;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 8px;
-  font-weight: 100;
+  font-weight: bold;
 `;
 
 const styleLabel = css`

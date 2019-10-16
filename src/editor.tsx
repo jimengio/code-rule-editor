@@ -3,7 +3,6 @@ import _ from "lodash";
 import { css, cx } from "emotion";
 import produce from "immer";
 
-import KIcon, { EFaIcon } from "@jimengio/fa-icons";
 import ChecksumImmerForm, { validateChecksumForm } from "./forms/checksum-form";
 import AutoIncrementImmerForm, { validateAutoIncrementForm } from "./forms/auto-increment-form";
 import LiteralImmerForm, { validateLiteralForm } from "./forms/literal-form";
@@ -33,7 +32,7 @@ import { row, center } from "@jimengio/flex-styles";
 import { ECodeRuleType } from "./models/types";
 import Button from "antd/lib/button";
 import { lang } from "./lingual";
-import { Space } from "@jimengio/meson-display";
+import { Space } from "@jimengio/flex-styles";
 import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
 
 interface IProps {
@@ -118,8 +117,7 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
           </div>
           <Space width={16} />
           <div className={center}>
-            <KIcon
-              name={EFaIcon.Plus}
+            <span
               className={styleAddIcon}
               onClick={() => {
                 this.setImmerState((state) => {
@@ -131,7 +129,9 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
                   state.isModified = true;
                 });
               }}
-            />
+            >
+              ➕
+            </span>
           </div>
         </div>
         <div className={styleFormContainer}>
@@ -469,5 +469,6 @@ const styleFormContainer = css`
 `;
 
 const styleAddIcon = css`
+  font-size: 13px;
   cursor: pointer;
 `;

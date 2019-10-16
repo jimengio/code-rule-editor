@@ -7,14 +7,11 @@ import { CSSProperties, ReactNode } from "react";
 import _ from "lodash";
 import { css, cx } from "emotion";
 import { inlineRow, column, row, flex } from "@jimengio/flex-styles";
-import { marginLeft4, marginRight4, noShrink, verticalAlignBottom, inlineBlock, marginLeft8, marginRight8, alignItemCenter } from "./style/presets";
 import { lang, formatString } from "./lingual";
 import Input from "antd/lib/input";
 import Alert from "antd/lib/alert";
-import Tooltip from "antd/lib/tooltip";
 import Select from "antd/lib/select";
 
-import Icon, { EFaIcon } from "@jimengio/fa-icons";
 import TextArea from "antd/lib/input/TextArea";
 import { immerMerge } from "@jimengio/shared-utils";
 let { Option } = Select;
@@ -178,15 +175,6 @@ export class LabeledField extends React.Component<IFieldOptions, any> {
           <div className={cx(styleLabel, styleFormLabel, options.classFormLabel)} style={options.styleFormLabel}>
             {options.showRequired ? <span className={styleFormRequired}>*</span> : null}
             {options.label}
-            {options.labelInfo && (
-              <span className={cx(marginLeft4, marginRight4)}>
-                <Tooltip title={options.labelInfo}>
-                  <span>
-                    <Icon name={EFaIcon.ExclamationCircle} />
-                  </span>
-                </Tooltip>
-              </span>
-            )}
             {!this.props.hideSymbolColon && <span>{options.label !== null ? lang.symbolColon : null}</span>}
           </div>
         )}
