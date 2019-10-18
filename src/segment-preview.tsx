@@ -157,11 +157,11 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
 
   renderWeekOfYear(form: ICodeRuleFormWeekOfYear) {
     return _.padStart(
-      "0",
-      2,
-      moment()
+      dayjs()
         .week()
-        .toString()
+        .toString(),
+      2,
+      "0"
     );
   }
 
