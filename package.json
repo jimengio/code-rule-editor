@@ -1,6 +1,6 @@
 {
   "name": "@jimengio/code-rule-editor",
-  "version": "0.1.0-a3",
+  "version": "0.1.0",
   "description": "Code rule editor of JimengIO",
   "main": "lib/index.js",
   "scripts": {
