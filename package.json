@@ -1,6 +1,6 @@
 {
   "name": "@jimengio/code-rule-editor",
-  "version": "0.1.0",
+  "version": "0.1.1-a1",
   "description": "Code rule editor of JimengIO",
   "main": "lib/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "@jimengio/safe-property": "^0.0.2",
     "@jimengio/shared-utils": "^0.1.5",
     "@types/antd": "^1.0.0",
-    "@types/lodash": "^4.14.149",
+    "@types/lodash-es": "^4.17.3",
     "@types/node": "^12.12.21",
     "@types/prettier": "^1.19.0",
     "@types/query-string": "^6.3.0",
@@ -69,7 +69,6 @@
     "decimal.js": "^10.2.0",
     "emotion": "^10.0.23",
     "immer": "^5.0.2",
-    "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "query-string": "^6.9.0",
     "react": "^16.12.0",

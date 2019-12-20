@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty } from "lodash-es";
 import produce from "immer";
 
 import { styleFormContainer, styleFormRowsList, LabeledField, LabeledFieldInput } from "../immer-form";
@@ -73,7 +73,7 @@ export default class ParameterValueImmerForm extends React.Component<IProps, ISt
 export const validateParameterValueForm = (form: ICodeRuleFormParameterValue) => {
   let result: any = {};
 
-  if (_.isEmpty(form.parameterName)) {
+  if (isEmpty(form.parameterName)) {
     result.parameterName = lang.parameterNameRequired;
   }
 

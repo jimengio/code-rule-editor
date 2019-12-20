@@ -47,6 +47,7 @@ module.exports = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true, async: false }),
+    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn/),
     new MiniCssExtractPlugin({
       filename: "[name].[hash:8].css",
       chunkFilename: "[name].[chunkhash:8].css",

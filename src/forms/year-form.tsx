@@ -1,5 +1,4 @@
 import React from "react";
-import _ from "lodash";
 import produce from "immer";
 import Select from "antd/lib/select";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { map, merge, fromPairs, isEmpty, isNil, every, toPairs } from "lodash-es";
 import { css, cx } from "emotion";
 import produce from "immer";
 
@@ -64,7 +64,7 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
   }
 
   getFormsFromSegments(segments: ICodeRule[]) {
-    return _.map(segments, (segment) => _.merge({ type: segment.type }, _.fromPairs(_.map(segment.settings, (setting) => [setting.name, setting.value]))));
+    return map(segments, (segment) => merge({ type: segment.type }, fromPairs(map(segment.settings, (setting) => [setting.name, setting.value]))));
   }
 
   setImmerState = immerHelpers.immerState as ImmerStateFunc<IState>;
@@ -83,7 +83,7 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
                   isFocused={idx === this.state.focusedPosition}
                   movingPosition={this.state.movingPosition}
                   droppingPosition={this.state.droppingPosition}
-                  failuresHighlighted={!_.isEmpty(this.state.listedFailures[idx])}
+                  failuresHighlighted={!isEmpty(this.state.listedFailures[idx])}
                   onClick={() => {
                     this.setImmerState((state) => {
                       state.focusedPosition = idx;
@@ -149,7 +149,7 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
   }
 
   renderForm(form, failures: any[]) {
-    if (_.isNil(form)) {
+    if (isNil(form)) {
       return null;
     }
     switch (form.type) {
@@ -374,11 +374,11 @@ export default class CodeRuleEditor extends React.Component<IProps, IState> {
   onConfirm = () => {
     let listedFailures = this.getValidationResults(this.state.formList);
 
-    if (_.every(listedFailures, _.isEmpty)) {
+    if (every(listedFailures, isEmpty)) {
       let newSegments = this.state.formList.map((form) => {
         return {
           type: form.type,
-          settings: _.map(_.toPairs(form), (pair) => {
+          settings: map(toPairs(form), (pair) => {
             return { name: pair[0], value: `${pair[1]}` };
           }).filter((pair) => pair.name !== "type"),
         };

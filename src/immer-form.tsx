@@ -4,7 +4,7 @@
 
 import * as React from "react";
 import { CSSProperties, ReactNode } from "react";
-import _ from "lodash";
+import { isString, values, isNil, isObject } from "lodash-es";
 import { css, cx } from "emotion";
 import { inlineRow, column, row, flex } from "@jimengio/flex-styles";
 import { lang, formatString } from "./lingual";
@@ -50,7 +50,7 @@ export const validationMethods = {
 
     if (data == null) {
       return defaultFailed;
-    } else if (_.isString(data)) {
+    } else if (isString(data)) {
       if (data.length === 0) {
         return defaultFailed;
       }
@@ -104,7 +104,7 @@ export const validationMethods = {
 
 // function outdated, see https://github.com/beego/fi/pull/1247
 export function isFailuresEmpty(failures: object): boolean {
-  return _.values(failures).every(_.isNil);
+  return values(failures).every(isNil);
 }
 
 // form rows
@@ -135,10 +135,10 @@ let renderFailure = (failure) => {
   if (failure == null) {
     return null;
   }
-  if (_.isString(failure)) {
+  if (isString(failure)) {
     return <div className={styleFormInvalid}>{failure}</div>;
   }
-  if (_.isObject(failure)) {
+  if (isObject(failure)) {
     let failureInfo = failure as IFailureInfo;
     switch (failureInfo.type) {
       case "warning":

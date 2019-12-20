@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { map, merge, toPairs, isNil, isEmpty, fromPairs } from "lodash-es";
 import produce from "immer";
 import { cx, css } from "emotion";
 
@@ -60,7 +60,7 @@ export function parseSegmentFromForm(form) {
   return {
     type: form.type,
     note: form.note,
-    settings: _.map(_.toPairs(form), (pair) => {
+    settings: map(toPairs(form), (pair) => {
       return { name: pair[0], value: `${pair[1]}` };
     }).filter((pair) => pair.name !== "type" && pair.name !== "note"),
   };
@@ -71,7 +71,7 @@ export function parseFormFromSegment(segment: ICodeRule) {
     segment = {} as ICodeRule;
   }
 
-  let form = _.merge({ type: segment.type, note: segment.note }, _.fromPairs(_.map(segment.settings, (setting) => [setting.name, setting.value])));
+  let form = merge({ type: segment.type, note: segment.note }, fromPairs(map(segment.settings, (setting) => [setting.name, setting.value])));
   if (!form || !form.type) {
     form = {
       type: ECodeRuleType.Literal,
@@ -139,7 +139,7 @@ export default class SingleCodeRuleEditor extends ImmerComponent<IProps, IState>
   }
 
   renderForm(form, failures: any) {
-    if (_.isNil(form)) {
+    if (isNil(form)) {
       return null;
     }
     switch (form.type) {
@@ -348,7 +348,7 @@ export default class SingleCodeRuleEditor extends ImmerComponent<IProps, IState>
     const form = parseFormFromSegment(this.props.codeRule);
     let failures = getValidationResults(form);
 
-    if (_.isEmpty(failures)) {
+    if (isEmpty(failures)) {
       const newSegment = parseSegmentFromForm(form);
 
       this.props.onSubmit(newSegment);

@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty } from "lodash-es";
 import produce from "immer";
 
 import { styleFormContainer, styleFormRowsList, LabeledField, LabeledFieldInput } from "../immer-form";
@@ -73,7 +73,7 @@ export default class LiteralImmerForm extends React.Component<IProps, IState> {
 export const validateLiteralForm = (form: ICodeRuleFormLiteral) => {
   let result: any = {};
 
-  if (_.isEmpty(form.content)) {
+  if (isEmpty(form.content)) {
     result.content = lang.contentRequired;
   }
 

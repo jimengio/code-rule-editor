@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { last, isEmpty } from "lodash-es";
 import produce from "immer";
 import InputNumber from "antd/lib/input-number";
 import Select from "antd/lib/select";
@@ -101,7 +101,7 @@ export default class ChecksumImmerForm extends React.Component<IProps, IState> {
             onChange={(value: string) => {
               this.props.onSubmit(
                 produce(form, (draft) => {
-                  draft.paddingCharactor = _.last((value as string) || "0");
+                  draft.paddingCharactor = last((value as string) || "0");
                 })
               );
             }}
@@ -119,11 +119,11 @@ export const validateChecksumForm = (form: ICodeRuleFormChecksum) => {
     result.length = lang.invalidInput;
   }
 
-  if (_.isEmpty(form.paddingCharactor)) {
+  if (isEmpty(form.paddingCharactor)) {
     result.paddingCharactor = lang.dataIsRequired;
   }
 
-  if (_.isEmpty(form.algorithm)) {
+  if (isEmpty(form.algorithm)) {
     result.algorithm = lang.dataIsRequired;
   }
 

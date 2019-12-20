@@ -1,4 +1,4 @@
-import _ from "lodash";
+import { padStart, padEnd } from "lodash-es";
 import produce from "immer";
 import dayjs from "dayjs";
 import dayOfYear from "dayjs/plugin/dayOfYear";
@@ -171,10 +171,10 @@ export function renderLiteral(form: ICodeRuleFormLiteral) {
 
 export function renderUserInput(form: ICodeRuleFormUserInput, editable?: boolean) {
   if (editable) {
-    return _.padEnd(form.userInputValue != null ? form.userInputValue : "", form.length, "_");
+    return padEnd(form.userInputValue != null ? form.userInputValue : "", form.length, "_");
   }
 
-  return _.padStart("", form.length, "X");
+  return padStart("", form.length, "X");
 }
 
 export function renderParamaterValue(form: ICodeRuleFormParameterValue) {
@@ -194,7 +194,7 @@ export function renderDayOfMonth(form: ICodeRuleFormDayOfMonth) {
 }
 
 export function renderWeekOfYear(form: ICodeRuleFormWeekOfYear) {
-  return _.padStart(
+  return padStart(
     dayjs()
       .week()
       .toString(),
@@ -213,15 +213,15 @@ export function renderAutoIncrement(form: ICodeRuleFormAutoIncrement, offset: nu
   const current = form.currentAutoNumber || 1;
   const previewStart = start > current ? start : current;
 
-  return _.padStart(`${decimalSum(previewStart as number, offset)}`, form.length, form.paddingCharactor || "0");
+  return padStart(`${decimalSum(previewStart as number, offset)}`, form.length, form.paddingCharactor || "0");
 }
 
 export function renderChecksum(form: ICodeRuleFormChecksum) {
-  return _.padStart("", form.length, form.paddingCharactor);
+  return padStart("", form.length, form.paddingCharactor);
 }
 
 export function renderDayOfYear(form: ICodeRuleFormDayOfYear) {
-  return _.padStart(
+  return padStart(
     dayjs()
       .dayOfYear()
       .toString(),

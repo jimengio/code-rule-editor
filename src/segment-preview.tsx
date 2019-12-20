@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isNumber, padStart } from "lodash-es";
 import moment from "moment";
 import dayjs from "dayjs";
 import { css, cx } from "emotion";
@@ -95,7 +95,7 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
         </div>
         <div className={cx(styleLabel, this.props.isFocused ? styleFocused : null)}>{this.renderPreview(this.props.form)}</div>
 
-        {_.isNumber(from) && _.isNumber(to) && to === this.props.index ? this.renderDropHint(from, to) : null}
+        {isNumber(from) && isNumber(to) && to === this.props.index ? this.renderDropHint(from, to) : null}
       </div>
     );
   }
@@ -156,7 +156,7 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
   }
 
   renderWeekOfYear(form: ICodeRuleFormWeekOfYear) {
-    return _.padStart(
+    return padStart(
       dayjs()
         .week()
         .toString(),
@@ -170,15 +170,15 @@ export default class CodeRuleSegmentPreview extends React.Component<IProps, ISta
   }
 
   renderAutoIncrement(form: ICodeRuleFormAutoIncrement) {
-    return _.padStart("1", form.length, form.paddingCharactor || "0");
+    return padStart("1", form.length, form.paddingCharactor || "0");
   }
 
   renderChecksum(form: ICodeRuleFormChecksum) {
-    return _.padStart("", form.length, form.paddingCharactor);
+    return padStart("", form.length, form.paddingCharactor);
   }
 
   renderDayOfYear(form: ICodeRuleFormDayOfYear) {
-    return _.padStart(
+    return padStart(
       "0",
       3,
       moment()

@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty } from "lodash-es";
 import produce from "immer";
 
 import { styleFormContainer, styleFormRowsList, LabeledField, LabeledFieldInput } from "../immer-form";
@@ -98,7 +98,7 @@ export const validateUserInputForm = (form: ICodeRuleFormUserInput) => {
     result.length = lang.invalidInput;
   }
 
-  if (_.isEmpty(form.parameterName)) {
+  if (isEmpty(form.parameterName)) {
     result.parameterName = lang.parameterNameRequired;
   }
 
