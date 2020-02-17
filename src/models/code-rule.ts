@@ -91,6 +91,7 @@ export interface ICodeRuleFormUserInput {
   userInputValue?: string;
 }
 
-export interface IRule {
+/** 可能已经废弃 */
+export interface ICodeRuleSegments {
   segments: ICodeRule[];
 }
