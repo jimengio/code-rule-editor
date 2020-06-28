@@ -9,7 +9,7 @@ import { ICodeRuleFormParameterValue } from "../models/code-rule";
 
 import CodeRuleTypesDropdown from "../types-dropdown";
 import { ECodeRuleType, ELabelTextAlign } from "../models/types";
-import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc } from "../utils/immer-helper";
 
 interface IProps {
   form: ICodeRuleFormParameterValue;

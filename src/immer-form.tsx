@@ -13,7 +13,7 @@ import Alert from "antd/lib/alert";
 import Select from "antd/lib/select";
 
 import TextArea from "antd/lib/input/TextArea";
-import { immerMerge } from "@jimengio/shared-utils";
+import { immerMerge } from "./utils/immer-helper";
 let { Option } = Select;
 
 export interface ISingleValidationResult {

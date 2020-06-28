@@ -20,7 +20,7 @@ import {
 import { row, column } from "@jimengio/flex-styles";
 import { emptyBase64Image } from "./utils/image";
 import { lang } from "./lingual";
-import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc } from "./utils/immer-helper";
 
 interface IProps {
   form: any;

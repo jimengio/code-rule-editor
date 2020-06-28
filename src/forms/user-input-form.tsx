@@ -10,7 +10,7 @@ import { ICodeRuleFormUserInput } from "../models/code-rule";
 import CodeRuleTypesDropdown from "../types-dropdown";
 import { ECodeRuleType, ELabelTextAlign } from "../models/types";
 import InputNumber from "antd/lib/input-number";
-import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc } from "../utils/immer-helper";
 
 interface IProps {
   labelTextAlign?: ELabelTextAlign;

@@ -33,7 +33,7 @@ import { ECodeRuleType } from "./models/types";
 import Button from "antd/lib/button";
 import { lang } from "./lingual";
 import { Space } from "@jimengio/flex-styles";
-import { immerHelpers, ImmerStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc } from "./utils/immer-helper";
 
 interface IProps {
   segments: ICodeRule[];
