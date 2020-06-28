@@ -29,7 +29,6 @@
     "@jimengio/router-code-generator": "^0.2.6-a1",
     "@jimengio/ruled-router": "^0.2.24-a5",
     "@jimengio/safe-property": "^0.0.2",
-    "@jimengio/shared-utils": "^0.1.5",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^13.7.1",
     "@types/prettier": "^1.19.0",
@@ -76,7 +75,6 @@
     "@jimengio/jimo-basics": "^0.0.8",
     "@jimengio/jimo-icons": "^0.3.2",
     "@jimengio/meson-modal": "*",
-    "@jimengio/safe-property": "*",
-    "@jimengio/shared-utils": "*"
+    "@jimengio/safe-property": "*"
   }
 }

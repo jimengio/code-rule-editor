@@ -13,7 +13,7 @@ import Alert from "antd/lib/alert";
 import Select from "antd/lib/select";
 
 import TextArea from "antd/lib/input/TextArea";
-import { immerMerge } from "@jimengio/shared-utils";
+import { immerMerge } from "./utils/immer-helper";
 let { Option } = Select;
 
 export interface ISingleValidationResult {
@@ -150,7 +150,7 @@ let renderFailure = (failure) => {
       case "error":
         return (
           <div className={styleAlertWrapper}>
-            <Alert message={failureInfo.text} type="error" />>
+            <Alert message={failureInfo.text} type="error" />
           </div>
         );
     }

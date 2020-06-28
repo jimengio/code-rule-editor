@@ -1,6 +1,6 @@
 import React, { ChangeEvent, Component, CSSProperties } from "react";
 import TextArea from "antd/lib/input/TextArea";
-import { immerHelpers, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, MergeStateFunc } from "../utils/immer-helper";
 import { relative } from "@jimengio/flex-styles";
 import { css, cx } from "emotion";
 import { safeGet } from "@jimengio/safe-property";

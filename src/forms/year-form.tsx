@@ -9,7 +9,7 @@ import { ICodeRuleFormYear } from "../models/code-rule";
 
 import CodeRuleTypesDropdown from "../types-dropdown";
 import { ECodeRuleType, ELabelTextAlign } from "../models/types";
-import { ImmerStateFunc, immerHelpers } from "@jimengio/shared-utils";
+import { ImmerStateFunc, immerHelpers } from "../utils/immer-helper";
 
 let { Option } = Select;
 
