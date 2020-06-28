@@ -150,7 +150,7 @@ let renderFailure = (failure) => {
       case "error":
         return (
           <div className={styleAlertWrapper}>
-            <Alert message={failureInfo.text} type="error" />>
+            <Alert message={failureInfo.text} type="error" />
           </div>
         );
     }
