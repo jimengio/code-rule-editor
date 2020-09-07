@@ -14,7 +14,7 @@ interface IProps {
   suffix?: string | React.ReactNode;
   type?: string;
   disabled?: boolean;
-  size?: "large" | "default" | "small";
+  size?: "large" | "middle" | "small";
   onChange?: (value: string) => void;
   onFocus?: () => void;
   onBlur?: () => void;

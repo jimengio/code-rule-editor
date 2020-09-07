@@ -6,7 +6,7 @@ import * as React from "react";
 import { CSSProperties, ReactNode } from "react";
 import { isString, values, isNil, isObject } from "lodash-es";
 import { css, cx } from "emotion";
-import { inlineRow, column, row, flex } from "@jimengio/flex-styles";
+import { inlineRow, column, row, expand } from "@jimengio/flex-styles";
 import { lang, formatString } from "./lingual";
 import Input from "antd/lib/input";
 import Alert from "antd/lib/alert";
@@ -178,7 +178,7 @@ export class LabeledField extends React.Component<IFieldOptions, any> {
             {!this.props.hideSymbolColon && <span>{options.label !== null ? lang.symbolColon : null}</span>}
           </div>
         )}
-        <div className={cx(flex, styleFormValueContainer)}>
+        <div className={cx(expand, styleFormValueContainer)}>
           {valueItem}
           {options.validationFailure ? renderFailure(options.validationFailure) : null}
         </div>

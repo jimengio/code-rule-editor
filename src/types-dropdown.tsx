@@ -53,7 +53,11 @@ export default class CodeRuleTypesEditor extends React.Component<IProps, IState>
         {ruleTypes
           .filter((type) => !(excludeTypes || []).includes(type))
           .map((type) => {
-            return <Option key={type}>{lang[`sequence_${type}`]}</Option>;
+            return (
+              <Option value={type} key={type}>
+                {lang[`sequence_${type}`]}
+              </Option>
+            );
           })}
       </Select>
     );
