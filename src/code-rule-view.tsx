@@ -4,7 +4,7 @@ import produce from "immer";
 
 import { ECodeRuleType } from "./models/types";
 import { ICodeRule, ICodeRuleFormUserInput } from "./models/code-rule";
-import { column, row, rowMiddle, flex } from "@jimengio/flex-styles";
+import { column, row, rowMiddle, expand } from "@jimengio/flex-styles";
 import { lang, formatString } from "./lingual";
 import { getCodeContent, renderUserInput, parseCodeRuleMap } from "./utils/sequence-rule";
 import InputFormItem from "./forms/input-form-item";
@@ -32,7 +32,7 @@ export default class CodeRuleView extends Component<IProps, any> {
       mainContainer = column;
       itemContainer = cx(rowMiddle, marginBottom16);
       labelContainer = styleLabel;
-      valueContainer = flex;
+      valueContainer = expand;
     }
 
     return (
